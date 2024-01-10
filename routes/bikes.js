@@ -3,7 +3,7 @@ import routeBikes from '../controllers/bike-controller.js';
 const { getAllBikes, addBike, deleteById } = routeBikes;
 const router = Router();
 
-router.get('/catalog', getAllBikes);
+router.get('/', getAllBikes);
 router.post('/add', addBike);
 router.delete('/:contactId', deleteById);
 export default router;
