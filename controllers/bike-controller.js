@@ -1,5 +1,4 @@
-import BikeModel from '../models/barModelMongoose.js';
-
+import BikeModel from '../models/bikeModelsMongoose.js';
 const getAllBikes = async (req, res) => {
   const result = await BikeModel.find();
   return res.json(result);

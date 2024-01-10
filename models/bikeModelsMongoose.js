@@ -3,26 +3,23 @@ import Joi from 'joi';
 
 export const addBikeJoiSchema = Joi.object({
   name: Joi.string()
-    .max(15, 'Must be 15 characters or less')
-    .required('Required'),
+  .required('Required'),
   type: Joi.string()
-    .max(20, 'Must be 20 characters or less')
+  .required('Required'),
+  color:
+    Joi.string()
     .required('Required'),
-  color: Joi.string()
-    .max(20, 'Must be 20 characters or less')
+  wheelSize:
+    Joi.string()
     .required('Required'),
-  wheelSize: Joi.string()
-    .max(20, 'Must be 20 characters or less')
+  price:
+    Joi.number()
     .required('Required'),
-  price: Joi.number()
-    .max(100, 'Must be 100 characters or less')
-    .required('Required'),
-  description: Joi.string()
-    .max(20, 'Must be 20 characters or less')
+  description:
+    Joi.string()
     .required('Required'),
   id: Joi.number()
-    .max(2000, 'Must be 2000 characters or less')
-    .required('Required'),
+  .required('Required'),
 });
 
 const bikeSchema = new Schema(
