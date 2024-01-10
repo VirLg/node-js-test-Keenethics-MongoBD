@@ -3,7 +3,7 @@ const getAllBikes = async (req, res) => {
   const result = await BikeModel.find();
   return res.json(result);
 };
-const addCar = async (req, res) => {
+const addBike = async (req, res) => {
   const result = await BikeModel.create(req.body);
   return res.json(result);
 };
@@ -21,4 +21,4 @@ export const deleteById = async (req, res, next) => {
   }
 };
 
-export default { getAllBikes, addCar, deleteById };
+export default { getAllBikes, addBike, deleteById };
