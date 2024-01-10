@@ -7,7 +7,7 @@ const addBike = async (req, res) => {
   const result = await BikeModel.create(req.body);
   return res.json(result);
 };
-export const deleteById = async (req, res, next) => {
+const deleteById = async (req, res, next) => {
   const { contactId } = req.params;
   try {
     const result = await BikeModel.findByIdAndDelete(contactId);
@@ -20,5 +20,14 @@ export const deleteById = async (req, res, next) => {
     next(error);
   }
 };
+const putStatus = async (req, res, next) => {
+  const { contactId } = req.params;
 
-export default { getAllBikes, addBike, deleteById };
+  const result = await BikeModel.findByIdAndUpdate(contactId, req.body, {
+    stat: req.body,
+  });
+  console.log('req.body', req.body);
+  res.json(result);
+};
+
+export default { getAllBikes, addBike, deleteById, putStatus };
