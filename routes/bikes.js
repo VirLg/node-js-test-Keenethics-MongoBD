@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import routeCars from '../controllers/cars-controller.js';
-const { getAllBikes, addCar, deleteById } = routeCars;
+import routeBikes from '../controllers/bike-controller.js';
+const { getAllBikes, addCar, deleteById } = routeBikes;
 const router = Router();
 
 router.get('/catalog', getAllBikes);
