@@ -1,4 +1,4 @@
-node_modulea/
+node_modules/
 .env
 .vscode
 .idea
